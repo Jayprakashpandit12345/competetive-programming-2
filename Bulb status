@@ -1,0 +1,17 @@
+n=int(input("Enter no. of bulbs:"))
+t=int(input("no. of turn:"))
+status='off'
+for i in range(1,t+1):
+    if n%i==0:
+        if status=='off':
+            status='on'
+        elif status=='on':
+            status='off'
+print("status=",status) 
+
+
+===================================OUTPUT==================================
+
+Enter no. of bulbs:8191
+no. of turn:8191
+status= off
