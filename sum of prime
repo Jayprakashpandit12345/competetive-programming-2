@@ -1,0 +1,29 @@
+l1=[]
+num=int(input("Enter number:"))
+def prime(num):
+    if num==2:
+        return  True
+    for i in range(2, num):
+
+        if (num % i) == 0:
+            return False
+        else:
+            return True
+for j in range(1,num):
+    if prime(j):
+        l1.append(j)
+for i in l1:
+    for j in l1:
+        for k in l1:
+            for l in l1:
+                if((i+j+k+l)==num):
+                    print(i,j,k,l)
+                    quit()
+print("Invalid")
+
+'''
+=======================================OUTPUT=======================================================
+
+Enter number:235
+2 2 2 229
+'''
