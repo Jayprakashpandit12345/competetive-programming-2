@@ -1,0 +1,28 @@
+def square(n):
+    l=[]
+    for i in range(1,tower+1):
+        l.append(i*i)
+    return l
+import math
+tower=int(input("enter the no. of towers:"))
+ball=int(input("enter the no. of balls:"))
+l1=[]
+for i in range(tower):
+    l1.append([])
+for j in range(1,ball+1):
+    s=square(ball*ball)
+    for k in l1:
+        if len(k)==0:
+            k.append(j)
+            break
+
+        elif k[-1]+(j) in s:
+            k.append(j)
+            break
+
+print(l1)
+
+================================OUTPUT================================
+enter the no. of towers:4
+enter the no. of balls:11
+[[1, 3, 6, 10], [2, 7, 9], [4, 5, 11], [8]]
