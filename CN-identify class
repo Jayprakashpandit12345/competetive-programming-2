@@ -1,0 +1,20 @@
+ip=input("enter the ip address:")
+c=ip.split(".")
+if(int(c[0])>=0 and int(c[0])<=127):
+    print("Class A")
+    print("first address:-"+c[0]+".0.0.0")
+    print("last address:-"+c[0]+".255.255.255")
+elif(int(c[0])>=128 and int(c[0])<=191):
+    print("Class B")
+    print("first address:-"+c[0]+"."+c[1]+".0.0")
+    print("last address:-"+c[0]+"."+c[1]+".255.255")
+elif(int(c[0])>=192 and int(c[0])<=223):
+    print("Class C")
+    print("first address:-"+c[0]+"."+c[1]+"."+c[2]+".0")
+    print("last address:-"+c[0]+"."+c[1]+"."+c[2]+".255")
+elif(int(c[0])>224 and int(c[0])<=239):
+    print("Class D")
+elif(int(c[0])>=240 and int(c[0])<=255):
+    print("Class E")
+else:
+    print("Invalid Class")
