@@ -1,0 +1,25 @@
+import math
+def sqt(num):
+    sq_root=int(math.sqrt(num))
+    return (sq_root*sq_root)==num
+    
+tower=int(input("enter the no. of tower:"))   
+ball=int(input("enter the no. of balls:")) 
+output=[]
+
+for i in range(tower):
+    l1=[]
+    output.append(l1)
+for j in range(1,ball+1):
+    for i in output:
+        if len(i)==0:
+            i.append(j)
+            break
+        elif sqt(i[len(i)-1]+j):
+            i.append(j)
+            break
+print(output)        
+==================================output============================================================
+enter the no. of tower:3
+enter the no. of balls:11
+[[1, 3, 6, 10], [2, 7, 9], [4, 5, 11]]
