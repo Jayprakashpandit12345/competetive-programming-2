@@ -1,0 +1,9 @@
+from itertools import combinations
+s='rabbbbit'
+seq='rabbit'
+c=combinations(s,len(seq))
+count=0
+for i in c :
+     if ''.join(i)==seq:
+        count+=1
+print(count)
