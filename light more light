@@ -1,0 +1,10 @@
+r = int(input("enter the no of bulbs"))
+t= int(input("enter of turn"))
+bulb = "off"
+for i in range(1,r+1):
+    if(t%i == 0):
+        if(bulb == "off"):
+            bulb  = "on"
+        elif(bulb == "on"):
+            bulb = "off"
+print(bulb)
